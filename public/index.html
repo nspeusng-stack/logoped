@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Логопед‑дефектолог — Запись</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Логопед • Барановичи</div>
+      <nav class="nav">
+        <a href="#about">О специалисте</a>
+        <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <button id="bookBtn" class="btn btn-primary">Записаться</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Логопед‑дефектолог в Барановичах</h1>
+          <p class="lead">Индивидуальная диагностика и коррекция речи для детей. Очные занятия в Барановичах и онлайн для любого города.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" id="heroBook">Получить консультацию</button>
+            <button class="btn btn-ghost" id="heroChat">Задать вопрос</button>
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <div class="photo-card fade-in"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="about">
+      <h2>О специалисте</h2>
+      <div class="split">
+        <div class="card">
+          <h3>Образование и опыт</h3>
+          <ul>
+            <li>Высшее логопедическое образование, курсы повышения квалификации</li>
+            <li>Стаж работы: <strong>8 лет</strong></li>
+            <li>Методики: артикуляционная гимнастика, игровые методики, работа с ОВЗ</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Подход</h3>
+          <p>Индивидуальная программа, участие родителей в занятиях, регулярная обратная связь и домашние задания.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="services">
+      <h2>Услуги и случаи</h2>
+      <div class="grid">
+        <div class="service-card reveal">
+          <h4>Задержка речевого развития</h4>
+          <p>Работа с малышами, коррекция словаря и фонетики.</p>
+          <div class="meta">Срок: <strong>от 6 месяцев</strong></div>
+        </div>
+        <div class="service-card reveal">
+          <h4>Дислалия</h4>
+          <p>Коррекция произношения отдельных звуков.</p>
+          <div class="meta">Срок: <strong>3–6 месяцев</strong></div>
+        </div>
+        <div class="service-card reveal">
+          <h4>Дизартрия</h4>
+          <p>Комплексная логопедическая реабилитация.</p>
+          <div class="meta">Срок: <strong>от 4 месяцев</strong></div>
+        </div>
+        <div class="service-card reveal">
+          <h4>Заикание</h4>
+          <p>Коррекция речевых нарушений с опорой на дыхание и темп речи.</p>
+          <div class="meta">Срок: <strong>от 4 месяцев</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="prices">
+      <h2>Цены и пакеты</h2>
+      <div class="grid">
+        <div class="price-card reveal">
+          <h4>Базовый</h4>
+          <p>Диагностика + 4 занятия</p>
+          <div class="price">Цена: <strong>по запросу</strong></div>
+        </div>
+        <div class="price-card reveal">
+          <h4>Интенсив</h4>
+          <p>Диагностика + 12 занятий + отчет</p>
+          <div class="price">Цена: <strong>по запросу</strong></div>
+        </div>
+        <div class="price-card reveal">
+          <h4>Онлайн</h4>
+          <p>Индивидуальные онлайн‑сессии, гибкий график</p>
+          <div class="price">Цена: <strong>по запросу</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="contacts">
+      <h2>Контакты и запись</h2>
+      <div class="split">
+        <form id="leadForm" class="form card">
+          <h3>Оставить заявку</h3>
+          <input type="text" name="parentName" placeholder="Имя родителя" required />
+          <input type="text" name="childName" placeholder="Имя ребёнка и возраст" required />
+          <select name="format" id="formatSelect" required>
+            <option value="offline">Очное — Барановичи</option>
+            <option value="online">Онлайн — любое гео</option>
+          </select>
+          <input type="text" name="timezone" id="timezone" placeholder="Часовой пояс (для онлайн)" />
+          <input type="text" name="contact" placeholder="Телефон или e‑mail" required />
+          <textarea name="problem" placeholder="Кратко опишите проблему" required></textarea>
+          <div class="row">
+            <label class="checkbox">
+              <input type="checkbox" name="consent" required /> Согласие на обработку данных
+            </label>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </div>
+          <div id="formMsg" class="form-msg"></div>
+        </form>
+
+        <div class="card">
+          <h3>Адрес</h3>
+          <p>Барановичи. Очные приёмы доступны только в городе.</p>
+          <div class="map-placeholder">Карта (для теста локально заглушка)</div>
+
+          <div class="chat-block">
+            <h4>Быстрый чат</h4>
+            <div id="chatArea" class="chat-area"></div>
+            <div class="chat-controls">
+              <input id="chatInput" placeholder="Напишите вопрос..." />
+              <button id="chatSend" class="btn btn-ghost">Отправить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© Логопед • Барановичи</div>
+      <div>Телефон: <a href="tel:+375000000000">+375 (XX) XXX‑XX‑XX</a></div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
