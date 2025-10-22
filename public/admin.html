@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Админ — Debug</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .admin-wrap{max-width:720px;margin:40px auto;padding:20px}
+    .admin-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 28px rgba(15,23,42,0.06)}
+    .row{display:flex;gap:10px;align-items:center}
+    .status-pill{display:inline-block;padding:6px 10px;border-radius:999px;font-weight:600}
+    .status-on{background:#e6fffa;color:#0b6b58}
+    .status-off{background:#fff5f5;color:#a11}
+    .secret-input{width:100%;padding:8px;border-radius:8px;border:1px solid #e6e9ee}
+    .muted{font-size:13px;color:var(--muted);margin-top:8px}
+  </style>
+</head>
+<body>
+  <main class="admin-wrap">
+    <h1>Админ: режим отладки</h1>
+    <div class="admin-card">
+      <div style="margin-bottom:12px" id="statusBlock">
+        <span>Текущее состояние: </span><span id="statusPill" class="status-pill status-off">Загрузка...</span>
+      </div>
+
+      <div style="margin-bottom:12px">
+        <label>ADMIN SECRET</label>
+        <input id="adminSecret" class="secret-input" type="password" placeholder="Введите x-admin-secret для действий" autocomplete="off" />
+      </div>
+
+      <div class="row" style="margin-bottom:12px">
+        <button id="refreshBtn" class="btn">Обновить статус</button>
+        <button id="enableBtn" class="btn">Включить debug</button>
+        <button id="disableBtn" class="btn">Отключить debug</button>
+      </div>
+
+      <div class="muted">Вводите секрет только при необходимости. Секрет не сохраняется и не отправляется на сторонние сервисы.</div>
+      <div id="msg" class="muted" style="margin-top:8px"></div>
+    </div>
+  </main>
+
+  <script src="/admin.js"></script>
+</body>
+</html>
